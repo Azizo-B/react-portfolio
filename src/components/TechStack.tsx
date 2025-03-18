@@ -32,16 +32,16 @@ const TechStack = ({ techStack }: { techStack: Tech[] }) => {
           {techStack.map((tech, index) => (
             <motion.div
               key={index}
-              className="h-[128px] w-[128px] p-6 flex flex-col items-center justify-center bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="h-[100px] w-[100px] p-6 flex flex-col items-center justify-center bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               variants={itemVariants}
             >
               <div
-                className="mb-2 text-4xl"
+                className="mb-2"
                 style={{ color: tech.color || "inherit" }} // Apply color only if it exists
               >
                 {tech.icon}
               </div>
-              <span className="text-lg font-medium text-gray-700">
+              <span className="text-lg font-medium text-gray-700 whitespace-nowrap">
                 {tech.name}
               </span>
             </motion.div>

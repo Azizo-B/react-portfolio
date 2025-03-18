@@ -112,11 +112,8 @@ const ExperienceCard = ({
             transform: "rotateY(180deg)",
           }}
         >
-          <div className="flex flex-col items-center justify-center h-full p-6">
-            <h3 className="text-lg font-semibold mb-4">Summary</h3>
-            <p className="text-sm text-gray-700 text-center">
-              {experience.description}
-            </p>
+          <div className="h-full flex justify-center items-center p-9">
+            <p className="text-sm text-gray-700">{experience.summary}</p>
           </div>
         </motion.div>
       </motion.div>

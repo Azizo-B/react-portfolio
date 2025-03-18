@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type Experience = {
   logo: string;
   title: string;
@@ -9,4 +11,5 @@ export type Experience = {
   bulletPoints: string[];
   location: string;
   jobType: string;
+  summary: ReactNode;
 };

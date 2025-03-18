@@ -1,25 +1,9 @@
-import React from "react";
 import TiltedCard from "./TiltedCard";
 import { HiExternalLink } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { Project } from "../types/project";
 
-interface ProjectCardProps {
-  image: string;
-  link?: string;
-  title: string;
-  description: string;
-  impact: string;
-  technologies: string[];
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  image,
-  title,
-  description,
-  impact,
-  link,
-  technologies,
-}) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <TiltedCard
       rotateAmplitude={7}
@@ -28,16 +12,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="p-6">
         <div className=" h-48 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded-lg border border-gray-200">
           <img
-            src={image}
+            src={project.image}
             alt={`logo`}
             className="w-full max-h-full object-cover rounded-lg"
           />
         </div>
-        <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+        <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
         {/* Live Project Link */}
-        {link && (
+        {project.link && (
           <a
-            href={link}
+            href={project.link}
             className="project-link inline-flex items-center text-gray-400 hover:underline mb-4"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,15 +42,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <HiExternalLink className="ml-1 text-sm text-gray-400" />
           </a>
         )}
-        <p className="mb-4">{description}</p>
-        <p className="project-impact text-sm italic mb-4">{impact}</p>
+        <p className="mb-4">{project.description}</p>
+        <p className="project-impact text-sm italic mb-4">{project.impact}</p>
 
         {/* Technologies Used */}
-        <div className="project-tech flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
+        <div className="project-tech flex flex-wrap  gap-2">
+          {project.technologies.map((tech, index) => (
             <span
               key={index}
-              className="bg-black bg-opacity-20 text-sm px-2 py-1 rounded"
+              className="bg-[#3a3a3a] text-sm text-white px-2 py-1 rounded"
             >
               {tech}
             </span>

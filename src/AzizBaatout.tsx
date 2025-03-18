@@ -10,6 +10,8 @@ import { Project } from "./types/project";
 import { Tech } from "./types/tech";
 
 interface AzizBaatout {
+  name: string;
+  title: string;
   links: Link[];
   experiences: Experience[];
   projects: Project[];
@@ -17,6 +19,8 @@ interface AzizBaatout {
 }
 
 export const AzizBaatout: AzizBaatout = {
+  name: "Aziz Baatout",
+  title: "Student Software Developer",
   links: [
     {
       name: "LinkedIn",
@@ -47,14 +51,42 @@ export const AzizBaatout: AzizBaatout = {
       website: "https://www.ugent.be/",
       startDate: new Date("2025-03-01"),
       endDate: null, // Present
-      description: "Developed Studium.",
+      description:
+        "Top academic institution in Belgium, known for quality education and research.",
       bulletPoints: [
-        "Built and maintained a full-stack web application for student management.",
-        "Implemented RESTful APIs for seamless data integration.",
-        "Collaborated with cross-functional teams to deliver features on time.",
+        "Developed and maintained a Django/Nuxt.js web application for document management.",
+        "Wrote thorough documentation to ensure smooth project handover.",
       ],
       location: "Ghent, Belgium",
       jobType: "Part-time",
+      summary: (
+        <p>
+          As part of the{" "}
+          <a
+            href="https://gentsestudentenraad.be/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline hover:no-underline transition-all duration-300"
+          >
+            Ghent Student Council
+          </a>
+          , I developed and maintained{" "}
+          <a
+            href="http://studium.gent/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline hover:no-underline transition-all duration-300"
+          >
+            Studium
+          </a>
+          , a platform for students to share notes, summaries, and other
+          academic documents. These documents are protected by Ghent
+          University's copyright policies. I was the sole developer, handling
+          both the backend and frontend with technologies like Django, GraphQL,
+          Vue.js, and Nuxt.js. I was also responsible for documenting the
+          codebase to ensure smooth handovers for future developers.",
+        </p>
+      ),
     },
     {
       logo: "/optios-logo.png",
@@ -64,14 +96,26 @@ export const AzizBaatout: AzizBaatout = {
       startDate: new Date("2025-03-01"),
       endDate: null, // Present
       description:
-        "Automating data collection and lead generation for beauty salon owners.",
+        "Optios offers booking, POS, salon management, and marketing software for beauty salons.",
       bulletPoints: [
-        "Developed automated workflows for data extraction and processing.",
+        "Developed automated workflows for data extraction, reducing manual effort by 20%.",
         "Integrated third-party APIs for data enrichment.",
-        "Improved data accuracy by 20% through automation.",
+        "Improved data accuracy through automation.",
       ],
       location: "Lochristi, Belgium",
       jobType: "Part-time",
+      summary: (
+        <p>
+          At Optios, I worked on automating the process of gathering and
+          organizing data about beauty salon owners to help the sales team focus
+          on the most promising leads. I integrated with the CBE (Crossroads
+          Bank for Enterprises) to pull basic info about the salons and their
+          owners. I also set up other automations and tools to enrich the data,
+          making it faster and easier to figure out which leads were worth
+          pursuing. My work helped cut down on manual tasks by about 20% and
+          made the whole lead qualification process smoother and more efficient.
+        </p>
+      ),
     },
     {
       logo: "/fintrax-logo.png",
@@ -81,14 +125,26 @@ export const AzizBaatout: AzizBaatout = {
       startDate: new Date("2023-02-01"),
       endDate: new Date("2025-03-01"),
       description:
-        "Enhanced web apps with AI-powered automation and efficient data handling.",
+        "Fintech scale-up partnering with Silverfin to automate post-accounting and tax processes.",
       bulletPoints: [
-        "Implemented AI-powered OCR for document processing.",
-        "Optimized database queries, reducing response times by 30%.",
-        "Mentored junior developers and conducted code reviews.",
+        "Developed features for a Django/Angular web application.",
+        "Implemented PDF parsing solutions for efficient text extraction.",
+        "Worked with APIs such as Exact Online, Silverfin, MyMinfin.",
       ],
       location: "Ghent, Belgium",
       jobType: "Part-time",
+      summary: (
+        <p>
+          At Fintrax, I started as a backend developer, working on features like
+          PDF parsing and filling to automate text extraction and document
+          processing. I also integrated with Silverfin for a few features to
+          support post-accounting and tax automation. As a quick learner, I was
+          soon tasked with frontend development as well, contributing to both
+          backend and frontend features for their Django and Angular web
+          application. My ability to adapt and take on new challenges showed
+          them I could handle anything they had in store.
+        </p>
+      ),
     },
     {
       logo: "/placeholder-logo.png",
@@ -97,42 +153,58 @@ export const AzizBaatout: AzizBaatout = {
       website: null,
       startDate: new Date("2023-08-01"),
       endDate: new Date("2024-04-01"),
-      description:
-        "Built AI solutions for document processing and financial data extraction.",
+      description: "Independent accountant focused on automating accountancy.",
       bulletPoints: [
-        "Developed machine learning models for invoice classification.",
-        "Automated financial data extraction, reducing manual effort by 50%.",
-        "Built a feedback loop to continuously improve model accuracy.",
+        "Implemented AI-powered OCR and classification for invoice processing",
+        "Deployed on Google Cloud with a focus on scale and minimizing operational costs.",
+        "Developed a MLOps pipeline, creating a positive feedback loop that continuously improves system performance with every invoice processed.",
       ],
       location: "Ghent, Belgium",
       jobType: "Part-time",
+      summary: (
+        <p>
+          At EB Accountancy, I developed InFlow, an AI-powered application for
+          invoice processing and automation. I used Google's AI OCR technology
+          to scan and extract data from invoices uploaded via the application's
+          UI. The extracted data was then checked, normalized, and stored in a
+          relational database. I also built a frontend annotation tool that
+          allowed users to provide feedback directly on the AI's extracted
+          bounding boxes, which was used to further train the AI and improve its
+          accuracy. Additionally, I implemented a system to classify processed
+          invoices into the correct account numbers. The application was
+          deployed on Google Cloud, ensuring scalability and cost efficiency,
+          while the MLOps pipeline I developed created a continuous feedback
+          loop to improve system performance over time.
+        </p>
+      ),
     },
   ],
   projects: [
     {
       image: "/cbe-logo.png",
-      title: "AI-powered Invoice Automation",
+      title: "The CBE Python Package",
       link: "https://pypi.org/project/cbe/",
       description:
-        "Built an AI-powered OCR solution to automate invoice processing, integrating with GCP's serverless architecture for seamless deployment.",
+        "The CBE Python Package provides an interface to interact with the CBE, enabling users to authenticate, download data extracts, and query enterprise details. Built with Python and SQLite, it simplifies access to enterprise data by mimicking the structure of the CBE Public Search website.",
       impact:
-        "Achieved 80% automation in invoice classification, saving 2 hours daily in processing time.",
-      technologies: [
-        "Python",
-        "Google Cloud",
-        "Document AI",
-        "Machine Learning",
-        "Docker",
-      ],
+        "Saves developers time by eliminating the need to reinvent the wheel.",
+      technologies: ["Python", "SQLite", "Github Actions", "Sphinx", "PyPi"],
     },
     {
       image: "/rijexamenmeldingen-logo.png",
       link: "https://rijexamenmeldingen.be",
       title: "Driving Exam Monitoring System",
       description:
-        "A real-time notification service tracking available driving exam slots across platforms. Uses Python, FastAPI, Google Cloud, and MongoDB for data monitoring and instant notifications via email, Discord, and Telegram.",
+        "A real-time notification service that tracks available driving exam slots across platforms. Built with Python, FastAPI, Google Cloud, and MongoDB, it monitors data changes and sends instant notifications via email, Discord, and Telegram.",
       impact: "Cut users' driving exam wait times from months to just days.",
-      technologies: ["Python", "FastAPI", "Google Cloud", "MongoDB", "Docker"],
+      technologies: [
+        "Python",
+        "FastAPI",
+        "Google Cloud",
+        "MongoDB",
+        "Docker",
+        "Stripe",
+      ],
     },
     {
       image: "/fe-gpu.png",

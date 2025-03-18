@@ -3,7 +3,15 @@ import LinkIcons from "./LinkIcons";
 import { motion } from "framer-motion";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 
-const Hero = ({ links }: { links: Link[] }) => {
+const Hero = ({
+  name,
+  title,
+  links,
+}: {
+  name: string;
+  title: string;
+  links: Link[];
+}) => {
   return (
     <section className="flex flex-col h-screen">
       <motion.div
@@ -17,15 +25,15 @@ const Hero = ({ links }: { links: Link[] }) => {
           className="text-nowrap overflow-hidden text-primary font-extrabold"
           style={{ fontSize: "clamp(2rem, 14vw, 4.5rem)" }}
         >
-          Aziz Baatout
+          {name}
         </h1>
 
         {/* Responsive Title */}
         <p
           className="text-nowrap overflow-hidden font-semibold text-gray-400"
-          style={{ fontSize: "clamp(1.25rem, 7vw, 2rem)" }}
+          style={{ fontSize: "clamp(1rem, 7vw, 1.7rem)" }}
         >
-          Software Engineer
+          {title}
         </p>
         <div className="mt-6">
           <LinkIcons links={links} />

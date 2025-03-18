@@ -1,7 +1,7 @@
-import React from "react";
+import { ReactNode } from "react";
 
 export interface Tech {
   name: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   color?: string;
 }
