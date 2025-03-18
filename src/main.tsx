@@ -13,8 +13,8 @@ createRoot(document.getElementById("root")!).render(
       <div className="relative max-h-screen overflow-y-auto">
         <Hero links={AzizBaatout.links} />
         <ExperienceTimeline experiences={AzizBaatout.experiences} />
-        <Projects />
-        <TechStack />
+        <Projects projects={AzizBaatout.projects} />
+        <TechStack techStack={AzizBaatout.techstack} />
       </div>
     </div>
   </StrictMode>
