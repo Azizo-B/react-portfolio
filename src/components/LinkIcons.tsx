@@ -6,7 +6,7 @@ const LinkIcons = ({ links }: { links: Link[] }) => {
   return (
     <motion.nav className="flex gap-4">
       {links.map((link, index) => (
-        <motion.div key={index} whileHover={{ y: -5 }}>
+        <motion.div key={index} whileHover={{ y: -5, scale: 1.15 }}>
           <a
             href={link.url}
             target="_blank"

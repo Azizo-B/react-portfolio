@@ -4,6 +4,8 @@ import "./index.css";
 import Hero from "./components/Hero";
 import ExperienceTimeline from "./components/ExperienceTimeline";
 import { AzizBaatout } from "./AzizBaatout";
+import Projects from "./components/Projects";
+import TechStack from "./components/TechStack";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -11,6 +13,8 @@ createRoot(document.getElementById("root")!).render(
       <div className="relative max-h-screen overflow-y-auto">
         <Hero links={AzizBaatout.links} />
         <ExperienceTimeline experiences={AzizBaatout.experiences} />
+        <Projects />
+        <TechStack />
       </div>
     </div>
   </StrictMode>
