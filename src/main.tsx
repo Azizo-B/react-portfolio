@@ -6,6 +6,7 @@ import ExperienceTimeline from "./components/ExperienceTimeline";
 import { AzizBaatout } from "./AzizBaatout";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
+import { FaLaptopCode } from "react-icons/fa6";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")!).render(
         <ExperienceTimeline experiences={AzizBaatout.experiences} />
         <Projects projects={AzizBaatout.projects} />
         <TechStack techStack={AzizBaatout.techstack} />
+        <FaLaptopCode />
       </div>
     </div>
   </StrictMode>
