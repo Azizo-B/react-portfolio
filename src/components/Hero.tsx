@@ -31,7 +31,7 @@ const Hero = ({
         {/* Responsive Title */}
         <p
           className="text-nowrap overflow-hidden font-semibold text-gray-400"
-          style={{ fontSize: "clamp(1rem, 7vw, 1.7rem)" }}
+          style={{ fontSize: "clamp(1rem, 5vw, 1.7rem)" }}
         >
           {title}
         </p>

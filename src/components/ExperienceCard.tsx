@@ -88,8 +88,19 @@ const ExperienceCard = ({
                 )}
               </p>
               <p className="text-sm text-gray-400">
-                {formatDateRange(experience.startDate, experience.endDate)} •{" "}
-                {experience.jobType}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <span>
+                    {formatDateRange(experience.startDate, experience.endDate)}
+                  </span>
+                  <span style={{ margin: "0 4px" }}>•</span>
+                  <span>{experience.jobType}</span>
+                </div>
               </p>
               <p className="text-sm text-gray-400">{experience.location}</p>
             </div>
@@ -110,9 +121,15 @@ const ExperienceCard = ({
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
+            zIndex: isFlipped ? 10 : 0, // Ensure back side is on top when flipped
           }}
         >
-          <div className="h-full flex justify-center items-center p-9">
+          <div
+            className="h-full flex justify-center items-center p-9 overflow-auto break-words"
+            style={{
+              padding: "1rem",
+            }}
+          >
             <p className="text-sm text-gray-700">{experience.summary}</p>
           </div>
         </motion.div>

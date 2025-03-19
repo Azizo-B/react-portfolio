@@ -58,7 +58,7 @@ export const AzizBaatout: AzizBaatout = {
         "Wrote thorough documentation to ensure smooth project handover.",
       ],
       location: "Ghent, Belgium",
-      jobType: "Part-time",
+      jobType: "Student Job",
       summary: (
         <p>
           As part of the{" "}
@@ -103,7 +103,7 @@ export const AzizBaatout: AzizBaatout = {
         "Improved data accuracy through automation.",
       ],
       location: "Lochristi, Belgium",
-      jobType: "Part-time",
+      jobType: "Student Job",
       summary: (
         <p>
           At Optios, I worked on automating the process of gathering and
@@ -132,7 +132,7 @@ export const AzizBaatout: AzizBaatout = {
         "Worked with APIs such as Exact Online, Silverfin, MyMinfin.",
       ],
       location: "Ghent, Belgium",
-      jobType: "Part-time",
+      jobType: "Student Job",
       summary: (
         <p>
           At Fintrax, I started as a backend developer, working on features like
@@ -147,8 +147,8 @@ export const AzizBaatout: AzizBaatout = {
       ),
     },
     {
-      logo: "/placeholder-logo.png",
-      title: "AI Developer",
+      logo: "/eb-accountancy-logo.png",
+      title: "Software Engineer",
       company: "EB Accountancy",
       website: null,
       startDate: new Date("2023-08-01"),
@@ -160,7 +160,7 @@ export const AzizBaatout: AzizBaatout = {
         "Developed a MLOps pipeline, creating a positive feedback loop that continuously improves system performance with every invoice processed.",
       ],
       location: "Ghent, Belgium",
-      jobType: "Part-time",
+      jobType: "Student Job",
       summary: (
         <p>
           At EB Accountancy, I developed InFlow, an AI-powered application for
