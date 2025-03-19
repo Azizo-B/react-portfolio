@@ -60,7 +60,7 @@ export const AzizBaatout: AzizBaatout = {
       location: "Ghent, Belgium",
       jobType: "Student Job",
       summary: (
-        <p>
+        <div>
           As part of the{" "}
           <a
             href="https://gentsestudentenraad.be/en/"
@@ -84,8 +84,8 @@ export const AzizBaatout: AzizBaatout = {
           University's copyright policies. I was the sole developer, handling
           both the backend and frontend with technologies like Django, GraphQL,
           Vue.js, and Nuxt.js. I was also responsible for documenting the
-          codebase to ensure smooth handovers for future developers.",
-        </p>
+          codebase to ensure smooth handovers for future developers.
+        </div>
       ),
     },
     {
@@ -105,7 +105,7 @@ export const AzizBaatout: AzizBaatout = {
       location: "Lochristi, Belgium",
       jobType: "Student Job",
       summary: (
-        <p>
+        <div>
           At Optios, I worked on automating the process of gathering and
           organizing data about beauty salon owners to help the sales team focus
           on the most promising leads. I integrated with the CBE (Crossroads
@@ -114,7 +114,7 @@ export const AzizBaatout: AzizBaatout = {
           making it faster and easier to figure out which leads were worth
           pursuing. My work helped cut down on manual tasks by about 20% and
           made the whole lead qualification process smoother and more efficient.
-        </p>
+        </div>
       ),
     },
     {
@@ -134,7 +134,7 @@ export const AzizBaatout: AzizBaatout = {
       location: "Ghent, Belgium",
       jobType: "Student Job",
       summary: (
-        <p>
+        <div>
           At Fintrax, I started as a backend developer, working on features like
           PDF parsing and filling to automate text extraction and document
           processing. I also integrated with Silverfin for a few features to
@@ -143,7 +143,7 @@ export const AzizBaatout: AzizBaatout = {
           backend and frontend features for their Django and Angular web
           application. My ability to adapt and take on new challenges showed
           them I could handle anything they had in store.
-        </p>
+        </div>
       ),
     },
     {
@@ -162,7 +162,7 @@ export const AzizBaatout: AzizBaatout = {
       location: "Ghent, Belgium",
       jobType: "Student Job",
       summary: (
-        <p>
+        <div>
           At EB Accountancy, I developed InFlow, an AI-powered application for
           invoice processing and automation. I used Google's AI OCR technology
           to scan and extract data from invoices uploaded via the application's
@@ -175,7 +175,7 @@ export const AzizBaatout: AzizBaatout = {
           deployed on Google Cloud, ensuring scalability and cost efficiency,
           while the MLOps pipeline I developed created a continuous feedback
           loop to improve system performance over time.
-        </p>
+        </div>
       ),
     },
   ],
