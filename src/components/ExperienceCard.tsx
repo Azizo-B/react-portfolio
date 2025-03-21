@@ -37,21 +37,12 @@ const ExperienceCard = ({
       {/* Card Container */}
       <motion.div
         className="w-full h-full bg-white shadow-lg p-6 border border-gray-200 rounded-2xl"
-        style={{
-          transformStyle: "preserve-3d",
-          WebkitBackfaceVisibility: isFlipped ? "visible" : "hidden", // Safari fix
-        }}
+        style={{ transformStyle: "preserve-3d" }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.5 }}
       >
         {/* Front Side */}
-        <motion.div
-          className="w-full h-full"
-          style={{
-            backfaceVisibility: "hidden",
-          }}
-        >
-          {/* Cursor Icon (if showCursor is true) */}
+        <motion.div className="w-full h-full">
           {showCursor && (
             <motion.div
               className="absolute top-4 right-4 text-gray-600"
@@ -121,11 +112,7 @@ const ExperienceCard = ({
         {/* Back Side */}
         <motion.div
           className="absolute top-0 left-0 w-full h-full"
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-            zIndex: isFlipped ? 10 : 0, // Ensure back side is on top when flipped
-          }}
+          style={{ transform: "rotateY(180deg) translateZ(1px)" }}
         >
           <div
             className="h-full flex justify-center bg-white shadow-lg border border-gray-200 rounded-2xl text-sm text-gray-700 items-center p-9 overflow-auto break-words"
