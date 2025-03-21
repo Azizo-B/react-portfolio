@@ -39,7 +39,7 @@ const ExperienceCard = ({
         className="w-full h-full bg-white shadow-lg p-6 border border-gray-200 rounded-2xl"
         style={{
           transformStyle: "preserve-3d",
-          WebkitBackfaceVisibility: "hidden", // Safari fix
+          WebkitBackfaceVisibility: isFlipped ? "visible" : "hidden", // Safari fix
         }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.5 }}
