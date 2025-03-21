@@ -10,6 +10,7 @@ const Hero = ({
 }: {
   name: string;
   title: string;
+  location: string;
   links: Link[];
 }) => {
   return (

@@ -8,60 +8,39 @@ import { Link } from "./types/link";
 import { Experience } from "./types/experience";
 import { Project } from "./types/project";
 import { Tech } from "./types/tech";
+import data from "./AzizBaatout.json";
 
 interface AzizBaatout {
   name: string;
   title: string;
+  location: string;
   links: Link[];
   experiences: Experience[];
   projects: Project[];
   techstack: Tech[];
 }
 
-export const AzizBaatout: AzizBaatout = {
-  name: "Aziz Baatout",
-  title: "Student Software Developer",
-  links: [
-    {
-      name: "LinkedIn",
-      icon: FaLinkedinIn,
-      url: "https://www.linkedin.com/in/aziz-baatout/",
-    },
-    {
-      name: "GitHub",
-      icon: FiGithub,
-      url: "https://github.com/Azizo-B",
-    },
-    {
-      name: "Email",
-      icon: FaEnvelope,
-      url: "mailto:aziz.baatout@gmail.com",
-    },
-    {
-      name: "CV",
-      icon: TbFileCv,
-      url: "/aziz-baatout-cv.pdf",
-    },
-  ],
-  experiences: [
-    {
-      logo: "/ghent-university-logo.png",
-      title: "Full-stack Developer",
-      company: "Ghent University",
-      website: "https://www.ugent.be/",
-      startDate: new Date("2025-03-01"),
-      endDate: null, // Present
-      description:
-        "Top academic institution in Belgium, known for quality education and research.",
-      bulletPoints: [
-        "Developed and maintained a Django/Nuxt.js web application for document management.",
-        "Wrote thorough documentation to ensure smooth project handover.",
-      ],
-      location: "Ghent, Belgium",
-      jobType: "Student Job",
-      summary: (
+const getLinkIcons = (linkName: string) => {
+  switch (linkName) {
+    case "LinkedIn":
+      return FaLinkedinIn;
+    case "GitHub":
+      return FiGithub;
+    case "Email":
+      return FaEnvelope;
+    case "CV":
+      return TbFileCv;
+    default:
+      throw new Error("No icon for:" + linkName);
+  }
+};
+
+const getjobSummary = (company: string, title: string) => {
+  switch (company + ", " + title) {
+    case "Ghent University, Full-stack Developer":
+      return (
         <div>
-          As part of the{" "}
+          As part of the
           <a
             href="https://gentsestudentenraad.be/en/"
             target="_blank"
@@ -70,7 +49,7 @@ export const AzizBaatout: AzizBaatout = {
           >
             Ghent Student Council
           </a>
-          , I developed and maintained{" "}
+          , I developed and maintained
           <a
             href="http://studium.gent/"
             target="_blank"
@@ -86,25 +65,9 @@ export const AzizBaatout: AzizBaatout = {
           Vue.js, and Nuxt.js. I was also responsible for documenting the
           codebase to ensure smooth handovers for future developers.
         </div>
-      ),
-    },
-    {
-      logo: "/optios-logo.png",
-      title: "Data Automation Engineer",
-      company: "Optios",
-      website: "https://www.optios.net/",
-      startDate: new Date("2025-03-01"),
-      endDate: null, // Present
-      description:
-        "Optios offers booking, POS, salon management, and marketing software for beauty salons.",
-      bulletPoints: [
-        "Developed automated workflows for data extraction, reducing manual effort by 20%.",
-        "Integrated third-party APIs for data enrichment.",
-        "Improved data accuracy through automation.",
-      ],
-      location: "Lochristi, Belgium",
-      jobType: "Student Job",
-      summary: (
+      );
+    case "Optios, Data Automation Engineer":
+      return (
         <div>
           At Optios, I worked on automating the process of gathering and
           organizing data about beauty salon owners to help the sales team focus
@@ -115,25 +78,9 @@ export const AzizBaatout: AzizBaatout = {
           pursuing. My work helped cut down on manual tasks by about 20% and
           made the whole lead qualification process smoother and more efficient.
         </div>
-      ),
-    },
-    {
-      logo: "/fintrax-logo.png",
-      title: "Software Developer",
-      company: "Fintrax",
-      website: "https://www.fintrax.io/",
-      startDate: new Date("2023-02-01"),
-      endDate: new Date("2025-03-01"),
-      description:
-        "Fintech scale-up partnering with Silverfin to automate post-accounting and tax processes.",
-      bulletPoints: [
-        "Developed features for a Django/Angular web application.",
-        "Implemented PDF parsing solutions for efficient text extraction.",
-        "Worked with APIs such as Exact Online, Silverfin, MyMinfin.",
-      ],
-      location: "Ghent, Belgium",
-      jobType: "Student Job",
-      summary: (
+      );
+    case "Fintrax, Software Developer":
+      return (
         <div>
           At Fintrax, I started as a backend developer, working on features like
           PDF parsing and filling to automate text extraction and document
@@ -144,24 +91,9 @@ export const AzizBaatout: AzizBaatout = {
           application. My ability to adapt and take on new challenges showed
           them I could handle anything they had in store.
         </div>
-      ),
-    },
-    {
-      logo: "/eb-accountancy-logo.png",
-      title: "Software Engineer",
-      company: "EB Accountancy",
-      website: null,
-      startDate: new Date("2023-08-01"),
-      endDate: new Date("2024-04-01"),
-      description: "Independent accountant focused on automating accountancy.",
-      bulletPoints: [
-        "Implemented AI-powered OCR and classification for invoice processing",
-        "Deployed on Google Cloud with a focus on scale and minimizing operational costs.",
-        "Developed a MLOps pipeline, creating a positive feedback loop that continuously improves system performance with every invoice processed.",
-      ],
-      location: "Ghent, Belgium",
-      jobType: "Student Job",
-      summary: (
+      );
+    case "EB Accountancy, Software Engineer":
+      return (
         <div>
           At EB Accountancy, I developed InFlow, an AI-powered application for
           invoice processing and automation. I used Google's AI OCR technology
@@ -176,113 +108,87 @@ export const AzizBaatout: AzizBaatout = {
           while the MLOps pipeline I developed created a continuous feedback
           loop to improve system performance over time.
         </div>
-      ),
-    },
-  ],
-  projects: [
-    {
-      image: "/cbe-logo.png",
-      title: "The CBE Python Package",
-      link: "https://pypi.org/project/cbe/",
-      description:
-        "The CBE Python Package provides an interface to interact with the CBE, enabling users to authenticate, download data extracts, and query enterprise details. Built with Python and SQLite, it simplifies access to enterprise data by mimicking the structure of the CBE Public Search website.",
-      impact:
-        "Saves developers time by eliminating the need to reinvent the wheel.",
-      technologies: ["Python", "SQLite", "Github Actions", "Sphinx", "PyPi"],
-    },
-    {
-      image: "/rijexamenmeldingen-logo.png",
-      link: "https://rijexamenmeldingen.be",
-      title: "Driving Exam Monitoring System",
-      description:
-        "A real-time notification service that tracks available driving exam slots across platforms. Built with Python, FastAPI, Google Cloud, and MongoDB, it monitors data changes and sends instant notifications via email, Discord, and Telegram.",
-      impact: "Cut users' driving exam wait times from months to just days.",
-      technologies: [
-        "Python",
-        "FastAPI",
-        "Google Cloud",
-        "MongoDB",
-        "Docker",
-        "Stripe",
-      ],
-    },
-    {
-      image: "/fe-gpu.png",
-      title: "NVIDIA FE Bot",
-      description:
-        "Developed a bot to monitor NVIDIA GPU stock in real-time, enabling automated notifications on availability. This project pushed me to delve deeper into the world of programming and ignited my passion for technology.",
-      impact: "Helped me and my friends secure GPUs amidst high demand.",
-      technologies: ["Python", "Web Scraping"],
-    },
-  ],
-  techstack: [
-    {
-      name: "Python",
-      icon: <StackIcon name="python" className="w-10 h-10" />,
-      color: "",
-    },
-    { name: "Java", icon: <StackIcon className="w-10 h-10" name="java" /> },
-    { name: "JavaScript", icon: <StackIcon className="w-10 h-10" name="js" /> },
-    {
-      name: "TypeScript",
-      icon: <StackIcon className="w-10 h-10" name="typescript" />,
-    },
-    {
-      name: "Node.js",
-      icon: <StackIcon className="w-10 h-10" name="nodejs" />,
-    },
-    {
-      name: "Angular",
-      icon: <StackIcon className="w-10 h-10" name="angular17" />,
-    },
-    { name: "React", icon: <StackIcon className="w-10 h-10" name="reactjs" /> },
-    {
-      name: "Next.js",
-      icon: <StackIcon className="w-10 h-10" name="nextjs2" />,
-    },
-    { name: "Vue", icon: <StackIcon className="w-10 h-10" name="vuejs" /> },
-    {
-      name: "Nuxt.js",
-      icon: <StackIcon className="w-10 h-10" name="nuxtjs" />,
-    },
-    {
-      name: "Tailwind",
-      icon: <StackIcon className="w-10 h-10" name="tailwindcss" />,
-    },
-    {
-      name: "Express",
-      icon: <SiExpress className="w-10 h-10" />,
-    },
-    { name: "Django", icon: <StackIcon className="w-10 h-10" name="django" /> },
-    {
-      name: "FastAPI",
-      icon: <SiFastapi className="w-10 h-10" />,
-      color: "#009486",
-    },
-    { name: "Flask", icon: <StackIcon className="w-10 h-10" name="flask" /> },
-    {
-      name: "GraphQL",
-      icon: <StackIcon className="w-10 h-10" name="graphql" />,
-    },
-    { name: "Redis", icon: <StackIcon className="w-10 h-10" name="redis" /> },
-    { name: "MySQL", icon: <StackIcon className="w-10 h-10" name="mysql" /> },
-    {
-      name: "PostgreSQL",
-      icon: <StackIcon className="w-10 h-10" name="postgresql" />,
-    },
-    {
-      name: "SQL Server",
-      icon: <DiMsqlServer className="w-10 h-10" />,
-    },
-    {
-      name: "MongoDB",
-      icon: <StackIcon className="w-10 h-10" name="mongodb" />,
-    },
-    { name: "AWS", icon: <StackIcon className="w-10 h-10" name="aws" /> },
-    { name: "GCloud", icon: <StackIcon className="w-10 h-10" name="gcloud" /> },
-    { name: "Linux", icon: <StackIcon className="w-10 h-10" name="linux" /> },
-    { name: "Docker", icon: <StackIcon className="w-10 h-10" name="docker" /> },
-    { name: "Kafka", icon: <SiApachekafka className="w-10 h-10" /> },
-    { name: "Git", icon: <StackIcon className="w-10 h-10" name="git" /> },
-  ],
+      );
+    default:
+      throw new Error("No summary found for:" + company + ", " + title);
+  }
+};
+
+const getTechIcons = (techName: string) => {
+  switch (techName) {
+    case "Python":
+      return <StackIcon name="python" className="w-10 h-10" />;
+    case "Java":
+      return <StackIcon name="java" className="w-10 h-10" />;
+    case "JavaScript":
+      return <StackIcon name="js" className="w-10 h-10" />;
+    case "TypeScript":
+      return <StackIcon name="typescript" className="w-10 h-10" />;
+    case "Node.js":
+      return <StackIcon name="nodejs" className="w-10 h-10" />;
+    case "Angular":
+      return <StackIcon name="angular17" className="w-10 h-10" />;
+    case "React":
+      return <StackIcon name="reactjs" className="w-10 h-10" />;
+    case "Next.js":
+      return <StackIcon name="nextjs2" className="w-10 h-10" />;
+    case "Vue":
+      return <StackIcon name="vuejs" className="w-10 h-10" />;
+    case "Nuxt.js":
+      return <StackIcon name="nuxtjs" className="w-10 h-10" />;
+    case "Tailwind":
+      return <StackIcon name="tailwindcss" className="w-10 h-10" />;
+    case "Express":
+      return <SiExpress className="w-10 h-10" />;
+    case "Django":
+      return <StackIcon name="django" className="w-10 h-10" />;
+    case "FastAPI":
+      return <SiFastapi className="w-10 h-10" color="#009486" />;
+    case "Flask":
+      return <StackIcon name="flask" className="w-10 h-10" />;
+    case "GraphQL":
+      return <StackIcon name="graphql" className="w-10 h-10" />;
+    case "Redis":
+      return <StackIcon name="redis" className="w-10 h-10" />;
+    case "MySQL":
+      return <StackIcon name="mysql" className="w-10 h-10" />;
+    case "PostgreSQL":
+      return <StackIcon name="postgresql" className="w-10 h-10" />;
+    case "SQL Server":
+      return <DiMsqlServer className="w-10 h-10" />;
+    case "MongoDB":
+      return <StackIcon name="mongodb" className="w-10 h-10" />;
+    case "AWS":
+      return <StackIcon name="aws" className="w-10 h-10" />;
+    case "GCloud":
+      return <StackIcon name="gcloud" className="w-10 h-10" />;
+    case "Linux":
+      return <StackIcon name="linux" className="w-10 h-10" />;
+    case "Docker":
+      return <StackIcon name="docker" className="w-10 h-10" />;
+    case "Kafka":
+      return <SiApachekafka className="w-10 h-10" />;
+    case "Git":
+      return <StackIcon name="git" className="w-10 h-10" />;
+    default:
+      throw new Error("No icon for" + techName);
+  }
+};
+
+export const AzizBaatout: AzizBaatout = {
+  ...data,
+  links: data.links.map((link) => ({
+    ...link,
+    icon: getLinkIcons(link.name) || "",
+  })),
+  experiences: data.experiences.map((exp) => ({
+    ...exp,
+    startDate: new Date(exp.startDate),
+    endDate: exp.endDate ? new Date(exp.endDate) : null,
+    summary: getjobSummary(exp.company, exp.title),
+  })),
+  techstack: data.techstack.map((tech) => ({
+    name: tech.name,
+    icon: getTechIcons(tech.name),
+  })),
 };
