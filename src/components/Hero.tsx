@@ -30,11 +30,12 @@ const Hero = ({
 
         {/* Responsive Title */}
         <p
-          className="text-nowrap overflow-hidden font-semibold text-gray-400"
+          className="text-nowrap overflow-hidden font-semibold text-gray-400 inline-flex animate-background-shine bg-[linear-gradient(110deg,#939393,45%,#1e293b,55%,#939393)] bg-[length:250%_100%] bg-clip-text text-transparent"
           style={{ fontSize: "clamp(1rem, 5vw, 1.7rem)" }}
         >
           {title}
         </p>
+        <p className="font-semibold text-gray-400 flex">Ghent, Belgium</p>
         <div className="mt-6">
           <LinkIcons links={links} />
         </div>
