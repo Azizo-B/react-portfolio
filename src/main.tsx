@@ -14,7 +14,8 @@ createRoot(document.getElementById("root")!).render(
         <Hero
           name={AzizBaatout.name}
           title={AzizBaatout.title}
-          location={AzizBaatout.location}
+          city={AzizBaatout.city}
+          country={AzizBaatout.country}
           links={AzizBaatout.links}
         />
         <ExperienceTimeline experiences={AzizBaatout.experiences} />

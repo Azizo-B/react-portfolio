@@ -1,14 +1,14 @@
 {
   "name": "Aziz Baatout",
   "title": "Student Software Developer",
-  "location": "Ghent, Belgium",
+  "city": "Ghent",
+  "country": "Belgium",
   "phone": "+32456150084",
-  "e-mail": "aziz.baatout@gmail.com",
+  "email": "aziz.baatout@gmail.com",
   "links": [
-    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/aziz-baatout/" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/aziz-baatout/" },
     { "name": "GitHub", "url": "https://github.com/Azizo-B" },
-    { "name": "Email", "url": "mailto:aziz.baatout@gmail.com" },
-    { "name": "CV", "url": "/aziz-baatout-cv.pdf" }
+    { "name": "Email", "url": "mailto:aziz.baatout@gmail.com" }
   ],
   "education": [
     {
@@ -62,8 +62,7 @@
         "Optios offers booking, POS, salon management, and marketing software for beauty salons.",
       "bulletPoints": [
         "Developed automated workflows for data extraction, reducing manual effort by 20%.",
-        "Integrated third-party APIs for data enrichment.",
-        "Improved data accuracy through automation."
+        "Integrated third-party APIs for data enrichment, which improved data accuracy."
       ]
     },
     {
@@ -102,6 +101,7 @@
   ],
   "projects": [
     {
+      "showOnResume": false,
       "image": "/cbe-logo.png",
       "title": "The CBE Python Package",
       "link": "https://pypi.org/project/cbe/",
@@ -112,6 +112,7 @@
       "technologies": ["Python", "SQLite", "Github Actions", "Sphinx", "PyPi"]
     },
     {
+      "showOnResume": true,
       "image": "/rijexamenmeldingen-logo.png",
       "link": "https://rijexamenmeldingen.be",
       "title": "Driving Exam Monitoring System",
@@ -128,6 +129,7 @@
       ]
     },
     {
+      "showOnResume": false,
       "image": "/fe-gpu.png",
       "title": "NVIDIA FE Bot",
       "description":
@@ -165,20 +167,12 @@
     { "name": "Kafka" },
     { "name": "Git" }
   ],
-  "languages": [
-    {
-        "name": "Dutch"
-    },
-    {
-        "name": "French"
-    },
-    {
-        "name": "Arabic"
-    },
-    {
-        "name": "English"
-    }
-  ]
+"languages": [
+    {"name": "Dutch", "level": "Native"},
+    {"name": "Arabic", "level": "Native"},
+    {"name": "French", "level": "Advanced"},
+    {"name": "English", "level": "Advanced"}
+]
 }
 
 

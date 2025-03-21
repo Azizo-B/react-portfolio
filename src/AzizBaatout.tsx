@@ -13,7 +13,8 @@ import data from "./AzizBaatout.json";
 interface AzizBaatout {
   name: string;
   title: string;
-  location: string;
+  city: string;
+  country: string;
   links: Link[];
   experiences: Experience[];
   projects: Project[];
@@ -175,12 +176,20 @@ const getTechIcons = (techName: string) => {
   }
 };
 
+const links = data.links.map((link) => ({
+  ...link,
+  icon: getLinkIcons(link.name) || "",
+}));
+
+links.push({
+  name: "CV",
+  url: "/aziz-baatout-resume.pdf",
+  icon: getLinkIcons("CV"),
+});
+
 export const AzizBaatout: AzizBaatout = {
   ...data,
-  links: data.links.map((link) => ({
-    ...link,
-    icon: getLinkIcons(link.name) || "",
-  })),
+  links,
   experiences: data.experiences.map((exp) => ({
     ...exp,
     startDate: new Date(exp.startDate),

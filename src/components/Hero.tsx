@@ -6,11 +6,14 @@ import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 const Hero = ({
   name,
   title,
+  city,
+  country,
   links,
 }: {
   name: string;
   title: string;
-  location: string;
+  city: string;
+  country: string;
   links: Link[];
 }) => {
   return (
@@ -36,7 +39,9 @@ const Hero = ({
         >
           {title}
         </p>
-        <p className="font-semibold text-gray-400 flex">Ghent, Belgium</p>
+        <p className="font-semibold text-gray-400 flex">
+          {city + ", " + country}
+        </p>
         <div className="mt-6">
           <LinkIcons links={links} />
         </div>
