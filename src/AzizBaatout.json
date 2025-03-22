@@ -62,7 +62,7 @@
       "description":
         "Optios offers booking, POS, salon management, and marketing software for beauty salons.",
       "bulletPoints": [
-        "Developed automated workflows for data extraction, reducing manual effort by 20%.",
+        "Developed automated workflows for data extraction, reducing manual effort by 30%.",
         "Integrated third-party APIs for data enrichment, which improved data accuracy."
       ],
       "summary": "At Optios, I worked on automating the process of gathering and organizing data about beauty salon owners to help the sales team focus on the most promising leads. I integrated with the CBE (Crossroads\nBank for Enterprises) to pull basic info about the salons and their\nowners. I also set up other automations and tools to enrich the data,\nmaking it faster and easier to figure out which leads were worth\npursuing. My work helped cut down on manual tasks by about 20% and\nmade the whole lead qualification process smoother and more efficient."
@@ -120,14 +120,13 @@
       "image": "/rijexamenmeldingen-logo.png",
       "link": "https://rijexamenmeldingen.be",
       "title": "Driving Exam Monitoring System",
-      "description":
-        "A real-time notification service that tracks available driving exam slots across platforms. Built with Python, FastAPI, Google Cloud, and MongoDB, it monitors data changes and sends instant notifications via email, Discord, and Telegram.",
+      "description": "A real-time notification service for tracking available driving exam slots across platforms. The system monitors data changes and sends instant notifications via email, Discord, and Telegram. Built with Python, FastAPI, and MongoDB, deployed on Google Cloud.",
       "impact": "Cut users' driving exam wait times from months to just days.",
       "technologies": [
         "Python",
         "FastAPI",
-        "Google Cloud",
         "MongoDB",
+        "Google Cloud",
         "Docker",
         "Stripe"
       ]

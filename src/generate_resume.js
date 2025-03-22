@@ -181,15 +181,17 @@ const resume = String.raw`
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------
-\section{Projects}
+%-----------PERSONAL PROJECTS-----------
+\section{Personal Projects}
     \resumeSubHeadingListStart
     ${data.projects
       .filter((e) => e.showOnResume)
       .map(
         (e) =>
           String.raw`\resumeProjectHeading
-        {\textbf{${e.title}} $|$ \emph{${e.technologies.join(", ")}}}{}
+        {\href{${e.link}}{\textbf{${e.title}}} $|$ \emph{${e.technologies.join(
+            ", "
+          )}}}{}
         \resumeItemListStart 
         \resumeItem{${e.description}}
     \resumeItemListEnd`
@@ -221,7 +223,7 @@ ${data.certifications.map(
   \resumeSubHeadingListEnd
 
   
-%-----------PROGRAMMING SKILLS-----------
+%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
   \resumeSubHeadingListStart
     \item{ \small{ \textbf{${data.techstack
