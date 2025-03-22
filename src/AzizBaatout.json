@@ -6,7 +6,7 @@
   "phone": "+32456150084",
   "email": "aziz.baatout@gmail.com",
   "links": [
-    { "name": "LinkedIn", "url": "https://linkedin.com/in/aziz-baatout/" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/aziz-baatout" },
     { "name": "GitHub", "url": "https://github.com/Azizo-B" },
     { "name": "Email", "url": "mailto:aziz.baatout@gmail.com" }
   ],
@@ -47,7 +47,8 @@
       "bulletPoints": [
         "Developed and maintained a Django/Nuxt.js web application for document management.",
         "Wrote thorough documentation to ensure smooth project handover."
-      ]
+      ],
+      "summary": "As part of the Ghent Student Council, I developed and maintained Studium, a platform for students to share notes, summaries, and other academic documents. These documents are protected by Ghent University's copyright policies. I was the sole developer, handling both the backend and frontend with technologies like Django, GraphQL, Vue.js, and Nuxt.js. I was also responsible for documenting the codebase to ensure smooth handovers for future developers."
     },
     {
       "logo": "/optios-logo.png",
@@ -63,7 +64,8 @@
       "bulletPoints": [
         "Developed automated workflows for data extraction, reducing manual effort by 20%.",
         "Integrated third-party APIs for data enrichment, which improved data accuracy."
-      ]
+      ],
+      "summary": "At Optios, I worked on automating the process of gathering and organizing data about beauty salon owners to help the sales team focus on the most promising leads. I integrated with the CBE (Crossroads\nBank for Enterprises) to pull basic info about the salons and their\nowners. I also set up other automations and tools to enrich the data,\nmaking it faster and easier to figure out which leads were worth\npursuing. My work helped cut down on manual tasks by about 20% and\nmade the whole lead qualification process smoother and more efficient."
     },
     {
       "logo": "/fintrax-logo.png",
@@ -80,7 +82,8 @@
         "Developed features for a Django/Angular web application.",
         "Implemented PDF parsing solutions for efficient text extraction.",
         "Worked with APIs such as Exact Online, Silverfin, MyMinfin."
-      ]
+      ],
+      "summary": "At Fintrax, I started as a backend developer, working on features like\nPDF parsing and filling to automate text extraction and document\nprocessing. I also integrated with Silverfin for a few features to\nsupport post-accounting and tax automation. As a quick learner, I was\nsoon tasked with frontend development as well, contributing to both\nbackend and frontend features for their Django and Angular web\napplication. My ability to adapt and take on new challenges showed\nthem I could handle anything they had in store."
     },
     {
       "logo": "/eb-accountancy-logo.png",
@@ -96,7 +99,8 @@
         "Implemented AI-powered OCR and classification for invoice processing",
         "Deployed on Google Cloud with a focus on scale and minimizing operational costs.",
         "Developed a MLOps pipeline, creating a positive feedback loop that continuously improves system performance with every invoice processed."
-      ]
+      ],
+      "summary": "At EB Accountancy, I developed InFlow, an AI-powered application for invoice processing and automation. I used Google's AI OCR technology to scan and extract data from invoices uploaded via the application's UI. The extracted data was then checked, normalized, and stored in a relational database. I also built a frontend annotation tool that allowed users to provide feedback directly on the AI's extracted bounding boxes, which was used to further train the AI and improve its accuracy. Additionally, I implemented a system to classify processed invoices into the correct account numbers. The application was deployed on Google Cloud, ensuring scalability and cost efficiency, while the MLOps pipeline I developed created a continuous feedback loop to improve system performance over time."
     }
   ],
   "projects": [

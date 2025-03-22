@@ -140,7 +140,9 @@ const resume = String.raw`
             .replace("https://", "")
             .replace("mailto:", "")}}}`
       )
-      .join(" $|$ ")}
+      .join(
+        " $|$ "
+      )} $|$ \href{https://azizbaatout.com}{\underline{azizbaatout.com}}
 \end{center}
 
 

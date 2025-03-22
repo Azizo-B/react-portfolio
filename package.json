@@ -5,8 +5,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node src/generate_resume.mjs && vite",
-    "build": "node src/generate_resume.mjs && tsc -b && vite build",
+    "dev": "npm run build:resume && vite",
+    "build:resume": "node src/generate_resume.js",
+    "build": "npm run build:resume && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
