@@ -159,6 +159,7 @@ const resume = String.raw`
     .join("\n\\vspace{5pt}\n")}
   \resumeSubHeadingListEnd
 
+\vspace{5pt}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
