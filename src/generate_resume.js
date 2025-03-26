@@ -38,6 +38,12 @@ const resume = String.raw`
 \usepackage{tabularx}
 \input{glyphtounicode}
 
+\hypersetup{
+  pdftitle={Aziz Baatout - Resume},
+  pdfauthor={Aziz Baatout},
+  pdfsubject={Resume – Aziz Baatout | AI, Cloud, Automation & Software Development},
+  pdfkeywords={Aziz Baatout, Aziz, Baatout, Resume, Software Developer, AI, Automation}
+}
 
 %----------FONT OPTIONS----------
 % sans-serif
