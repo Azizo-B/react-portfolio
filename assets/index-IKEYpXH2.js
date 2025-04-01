@@ -5709,7 +5709,7 @@ Error generating stack: `+C.message+`
 Bank for Enterprises) to pull basic info about the salons and their
 owners. I also set up other automations and tools to enrich the data,
 making it faster and easier to figure out which leads were worth
-pursuing. My work helped cut down on manual tasks by about 20% and
+pursuing. My work helped cut down on manual tasks by about 30% and
 made the whole lead qualification process smoother and more efficient.`},{logo:"/fintrax-logo.png",title:"Software Developer",company:"Fintrax",location:"Ghent, Belgium",startDate:"2024-02-01",endDate:"2025-03-01",jobType:"Student Job",website:"https://www.fintrax.io/",description:"Fintech scale-up partnering with Silverfin to automate post-accounting and tax processes.",bulletPoints:["Developed features for a Django/Angular web application.","Implemented PDF parsing solutions for efficient text extraction.","Worked with APIs such as Exact Online, Silverfin, MyMinfin."],summary:`At Fintrax, I started as a backend developer, working on features like
 PDF parsing and filling to automate text extraction and document
 processing. I also integrated with Silverfin for a few features to
