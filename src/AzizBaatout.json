@@ -29,7 +29,7 @@
   "certifications": [
     {
       "name": "Harvard CS50 Python Certification",
-      "url": "https://www.edx.org/professional-certificate/harvardx-cs50s-programming-with-python"
+      "url": "https://certificates.cs50.io/5e15747a-ed00-49ee-960c-0c3bbbde5101.pdf"
     }
   ],
   "experiences": [
@@ -65,7 +65,7 @@
         "Developed automated workflows for data extraction, reducing manual effort by 30%.",
         "Integrated third-party APIs for data enrichment, which improved data accuracy."
       ],
-      "summary": "At Optios, I worked on automating the process of gathering and organizing data about beauty salon owners to help the sales team focus on the most promising leads. I integrated with the CBE (Crossroads\nBank for Enterprises) to pull basic info about the salons and their\nowners. I also set up other automations and tools to enrich the data,\nmaking it faster and easier to figure out which leads were worth\npursuing. My work helped cut down on manual tasks by about 20% and\nmade the whole lead qualification process smoother and more efficient."
+      "summary": "At Optios, I worked on automating the process of gathering and organizing data about beauty salon owners to help the sales team focus on the most promising leads. I integrated with the CBE (Crossroads\nBank for Enterprises) to pull basic info about the salons and their\nowners. I also set up other automations and tools to enrich the data,\nmaking it faster and easier to figure out which leads were worth\npursuing. My work helped cut down on manual tasks by about 30% and\nmade the whole lead qualification process smoother and more efficient."
     },
     {
       "logo": "/fintrax-logo.png",
@@ -92,7 +92,7 @@
       "location": "Ghent, Belgium",
       "startDate": "2023-08-01",
       "endDate": "2024-04-01",
-      "jobType": "Student Job",
+      "jobType": "Internship",
       "website": null,
       "description": "Independent accountant focused on automating accountancy.",
       "bulletPoints": [

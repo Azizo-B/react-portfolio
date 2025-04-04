@@ -36,6 +36,8 @@ const resume = String.raw`
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
 \input{glyphtounicode}
 
 \hypersetup{
@@ -128,6 +130,10 @@ const resume = String.raw`
 
 
 \begin{document}
+\begin{textblock*}{2.5cm}(\dimexpr 19.5cm, \dimexpr \paperheight - 2.1cm\relax) 
+    \includegraphics[width=2cm]{C:/Users/azizb/home/Frontend/react-portfolio/public/qr-code-black.png}
+\end{textblock*}
+
 % Sections formatting with added vertical padding
 \titleformat{\section}{
   \vspace{-5pt}\scshape\raggedright\large % Space before the section title
